@@ -2,7 +2,7 @@
 name: client-tests-workflow
 
 on: 
-  pull-request
+  pull_request
 
 jobs: # definit sur quel machine sa tourne
   test-client:
