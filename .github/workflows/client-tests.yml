@@ -1,0 +1,15 @@
+# Décrit les jobs et les steps mais n'execute pas d'action
+name: client-tests-workflow
+
+on: 
+  pull-request
+
+jobs: # definit sur quel machine sa tourne
+  test-client:
+    runs-on: ubuntu-latest # choix du système d'exploitation utilisé pour notre workflow
+    steps:
+      - name: check out code # récupérer le code du repo sur lequel le workflow est lancé
+        uses: actions/checkout@v2
+
+      - name: Goto client and run tests # aller au client et executer les tests
+        run: cd client && npm i && npm test
