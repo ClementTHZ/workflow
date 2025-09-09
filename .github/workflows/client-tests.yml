@@ -10,6 +10,5 @@ jobs: # definit sur quel machine sa tourne
     steps:
       - name: check out code # récupérer le code du repo sur lequel le workflow est lancé
         uses: actions/checkout@v2
-
       - name: Goto client and run tests # aller au client et executer les tests
         run: cd client && npm i && npm test
